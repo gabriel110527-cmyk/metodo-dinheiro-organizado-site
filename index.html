@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Método Dinheiro Organizado</title>
+<style>
+:root{--bg:#f7f9f7;--surface:#fff;--surface2:#eef5ef;--text:#17321f;--muted:#607067;--primary:#1f7a4d;--primary2:#145c39;--accent:#d9f0df;--border:#dbe7de;--shadow:0 18px 45px rgba(23,50,31,.10)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1711;--surface:#142019;--surface2:#192b20;--text:#edf7ef;--muted:#a8b9ad;--primary:#5fc788;--primary2:#3ca66b;--accent:#193a28;--border:#2b4233;--shadow:0 18px 45px rgba(0,0,0,.28)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+#app{min-height:100vh;background:var(--bg)}.container{width:min(1120px,92%);margin:auto}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;font-size:18px;letter-spacing:-.4px}.nav a{color:var(--muted);text-decoration:none;margin-left:24px;font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:14px 20px;font-weight:800;cursor:pointer;text-decoration:none;transition:.2s}.btn.primary{background:var(--primary);color:#fff;box-shadow:0 10px 25px rgba(31,122,77,.22)}.btn.primary:hover{transform:translateY(-2px);background:var(--primary2)}.btn.secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+.hero{padding:58px 0 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}.eyebrow{display:inline-block;background:var(--accent);color:var(--primary2);font-weight:800;font-size:13px;padding:8px 11px;border-radius:999px;margin-bottom:18px}
+h1{font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-2.7px;margin:0 0 20px}.hero p{font-size:19px;line-height:1.55;color:var(--muted);max-width:640px}.price{display:flex;align-items:end;gap:10px;margin:24px 0 18px}.price strong{font-size:42px;letter-spacing:-1.5px}.price span{color:var(--muted);margin-bottom:7px}.actions{display:flex;gap:12px;flex-wrap:wrap}.note{font-size:12px;color:var(--muted);margin-top:12px}
+.mock{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:18px;box-shadow:var(--shadow)}.mock-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.mock-title{font-weight:800}.dot{width:9px;height:9px;border-radius:50%;background:var(--primary);display:inline-block;margin-right:6px}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric{background:var(--surface2);border-radius:14px;padding:14px}.metric small{display:block;color:var(--muted);font-size:11px;margin-bottom:5px}.metric b{font-size:21px}.chart{margin-top:10px;background:var(--surface2);border-radius:14px;padding:15px}.bars{height:105px;display:flex;align-items:end;gap:9px}.bar{flex:1;border-radius:7px 7px 2px 2px;background:var(--primary);opacity:.78}
+.section{padding:82px 0}.section.alt{background:var(--surface2)}.center{text-align:center}.kicker{color:var(--primary);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1px}h2{font-size:38px;letter-spacing:-1.3px;margin:10px 0 13px}.lead{color:var(--muted);font-size:17px;line-height:1.6;max-width:700px;margin:0 auto}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}.card{background:var(--surface);border:1px solid var(--border);border-radius:17px;padding:24px}.icon{font-size:26px;margin-bottom:12px}.card h3{margin:0 0 7px;font-size:18px}.card p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}
+.problem{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.problem ul{padding:0;margin:20px 0;list-style:none}.problem li{padding:13px 0;border-bottom:1px solid var(--border);color:var(--muted)}.problem li::before{content:"✓";color:var(--primary);font-weight:900;margin-right:10px}.quote{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:30px;box-shadow:var(--shadow)}.quote b{font-size:24px;line-height:1.3;display:block}.quote p{color:var(--muted);line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:34px}.step{border:1px solid var(--border);background:var(--surface);padding:20px;border-radius:16px}.num{width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--primary2);display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:13px}
+.package{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}.checklist{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:25px}.checklist div{padding:11px 0;border-bottom:1px solid var(--border)}.checklist div:last-child{border-bottom:0}.checklist span{color:var(--primary);font-weight:900;margin-right:9px}
+.offer{max-width:700px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:36px;text-align:center;box-shadow:var(--shadow)}.offer .old{color:var(--muted);text-decoration:line-through}.offer .big{font-size:54px;font-weight:900;letter-spacing:-2px;margin:4px 0}
+.faq{max-width:780px;margin:30px auto 0}details{background:var(--surface);border:1px solid var(--border);border-radius:13px;margin:9px 0;padding:17px 19px}summary{font-weight:800;cursor:pointer}details p{color:var(--muted);line-height:1.55}
+footer{padding:35px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:820px){.hero,.problem,.package{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.nav a:not(.navcta){display:none}}
+@media(max-width:520px){h1{font-size:43px}.grid3,.steps{grid-template-columns:1fr}.hero{padding-top:35px}.section{padding:60px 0}.price strong{font-size:36px}}
+</style>
+</head>
+<body>
+<div id="app">
+<header class="container nav">
+<div class="brand">Método Dinheiro Organizado</div>
+<nav><a href="#como">Como funciona</a><a href="#inclui">O que inclui</a><a href="#duvidas">Dúvidas</a><a class="btn primary navcta" href="#comprar">Quero organizar</a></nav>
+</header>
+<main>
+<section class="container hero">
+<div>
+<span class="eyebrow">ORGANIZAÇÃO FINANCEIRA SEM COMPLICAÇÃO</span>
+<h1>Você sabe para onde seu salário está indo?</h1>
+<p>Tenha uma visão clara das suas receitas, despesas, cartões, parcelas, dívidas e metas em um único sistema de organização financeira.</p>
+<div class="price"><strong>R$ 29,90</strong><span>pagamento único</span></div>
+<div class="actions"><a class="btn primary" href="#comprar">Quero organizar meu dinheiro</a><a class="btn secondary" href="#como">Conhecer o método</a></div>
+<div class="note">Ferramenta educacional e de organização. Não é recomendação de investimentos.</div>
+</div>
+<div class="mock">
+<div class="mock-top"><div class="mock-title"><span class="dot"></span>Painel financeiro</div><span style="color:var(--muted);font-size:12px">Mês atual</span></div>
+<div class="metrics"><div class="metric"><small>Receitas</small><b>R$ 3.500</b></div><div class="metric"><small>Despesas</small><b>R$ 2.180</b></div><div class="metric"><small>Saldo</small><b>R$ 1.320</b></div><div class="metric"><small>Comprometido</small><b>62,3%</b></div></div>
+<div class="chart"><small style="color:var(--muted)">Despesas por categoria</small><div class="bars"><div class="bar" style="height:38%"></div><div class="bar" style="height:72%"></div><div class="bar" style="height:54%"></div><div class="bar" style="height:88%"></div><div class="bar" style="height:45%"></div><div class="bar" style="height:62%"></div><div class="bar" style="height:30%"></div></div></div>
+</div>
+</section>
+
+<section class="section alt" id="como"><div class="container"><div class="problem">
+<div><span class="kicker">O problema</span><h2>Quando você não enxerga o dinheiro, fica difícil controlá-lo.</h2><p class="lead" style="margin:0">Muitas vezes não é falta de vontade. É falta de uma visão simples e organizada.</p>
+<ul><li>O salário chega e parece desaparecer.</li><li>O cartão acumula compras e parcelas.</li><li>Você sabe que gasta, mas não sabe exatamente onde.</li><li>Metas ficam para depois porque não existe um plano.</li></ul></div>
+<div class="quote"><b>“Em vez de tentar lembrar de tudo de cabeça, coloque seus números em um só lugar.”</b><p>O Método foi criado para transformar informações espalhadas em uma rotina simples de acompanhamento.</p></div>
+</div></div></section>
+
+<section class="section"><div class="container center"><span class="kicker">Como funciona</span><h2>Um sistema simples para acompanhar o seu mês</h2><p class="lead">Você registra os dados e a planilha organiza os principais indicadores para ajudar na sua tomada de decisão.</p>
+<div class="steps"><div class="step"><div class="num">1</div><b>Registre</b><p>Coloque receitas e despesas em Lançamentos.</p></div><div class="step"><div class="num">2</div><b>Organize</b><p>Defina categorias, limites e cartões.</p></div><div class="step"><div class="num">3</div><b>Acompanhe</b><p>Veja orçamento, parcelas, dívidas e metas.</p></div><div class="step"><div class="num">4</div><b>Planeje</b><p>Use o Painel e o planejamento de 12 meses.</p></div></div>
+</div></section>
+
+<section class="section alt" id="inclui"><div class="container center"><span class="kicker">O que você recebe</span><h2>Não é só uma planilha</h2><p class="lead">É um pacote pensado para ajudar você a começar e entender como usar a ferramenta.</p>
+<div class="package"><div class="checklist">
+<div><span>✓</span><b>Planilha Método Dinheiro Organizado V2</b><br><small>Painel, lançamentos, orçamento, cartões, parcelas, dívidas, metas, planejamento e assinaturas.</small></div>
+<div><span>✓</span><b>Manual do Usuário</b><br><small>Passo a passo de cada aba, exemplos e solução de dúvidas comuns.</small></div>
+<div><span>✓</span><b>Guia de 30 Dias</b><br><small>Uma rotina prática para começar a organizar seus hábitos financeiros.</small></div>
+</div><div class="checklist">
+<div><span>✓</span><b>FAQ</b><br><small>Respostas para as principais dúvidas de utilização.</small></div>
+<div><span>✓</span><b>Comece Aqui</b><br><small>Orientação rápida para abrir a ferramenta e dar os primeiros passos.</small></div>
+<div><span>✓</span><b>Uso imediato</b><br><small>Dados de demonstração ajudam a entender o funcionamento antes de substituir pelos seus.</small></div>
+</div></div></div></section>
+
+<section class="section"><div class="container center"><span class="kicker">Recursos</span><h2>Tudo em um único lugar</h2>
+<div class="grid3"><div class="card"><div class="icon">📊</div><h3>Painel</h3><p>Receitas, despesas, saldo e principais indicadores do mês.</p></div><div class="card"><div class="icon">💳</div><h3>Cartões</h3><p>Limite, utilização e acompanhamento das compras de crédito.</p></div><div class="card"><div class="icon">🛒</div><h3>Parcelas</h3><p>Registre compras parceladas e visualize compromissos futuros.</p></div><div class="card"><div class="icon">📉</div><h3>Dívidas</h3><p>Organize saldo, parcelas, prioridade e projeções.</p></div><div class="card"><div class="icon">🎯</div><h3>Metas</h3><p>Acompanhe objetivos, progresso e referência mensal.</p></div><div class="card"><div class="icon">📅</div><h3>12 meses</h3><p>Planeje receitas e despesas e enxergue o saldo projetado.</p></div></div>
+</div></section>
+
+<section class="section alt" id="comprar"><div class="container"><div class="offer"><span class="kicker">Oferta de lançamento</span><h2>Método Dinheiro Organizado V2</h2><p class="lead">Tenha o sistema completo de organização financeira para começar a acompanhar seu dinheiro com mais clareza.</p><div class="big">R$ 29,90</div><p style="color:var(--muted)">pagamento único</p><a class="btn primary" style="width:100%;font-size:16px" href="https://pay.kiwify.com.br/SEU_CHECKOUT_AQUI">QUERO ORGANIZAR MEU DINHEIRO</a><div class="note">Você será direcionado para o checkout.</div></div></div></section>
+
+<section class="section" id="duvidas"><div class="container"><div class="center"><span class="kicker">Dúvidas</span><h2>Perguntas frequentes</h2></div><div class="faq">
+<details><summary>Preciso entender de Excel?</summary><p>Não. O manual foi criado para orientar quem nunca utilizou um sistema desse tipo. O ideal é começar pela aba Comece aqui.</p></details>
+<details><summary>A planilha faz os cálculos automaticamente?</summary><p>Sim, os principais cálculos da V2 são automatizados a partir dos dados que você informa.</p></details>
+<details><summary>Posso usar os dados de exemplo?</summary><p>Os dados de exemplo servem para demonstração. Para seu controle pessoal, substitua-os pelos seus próprios dados.</p></details>
+<details><summary>É recomendação de investimento?</summary><p>Não. O produto é voltado à organização e educação financeira. Não oferece recomendação personalizada de investimentos.</p></details>
+<details><summary>Funciona no Google Sheets?</summary><p>A maior parte da estrutura usa recursos comuns do Excel, mas algumas validações e formatações podem apresentar diferenças ao importar para outras ferramentas.</p></details>
+</div></div></section>
+</main>
+<footer><div class="container">Método Dinheiro Organizado • Organização financeira sem complicação</div></footer>
+</div>
+<script>document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const el=document.querySelector(a.getAttribute('href'));if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'})}}));</script>
+</body></html>
